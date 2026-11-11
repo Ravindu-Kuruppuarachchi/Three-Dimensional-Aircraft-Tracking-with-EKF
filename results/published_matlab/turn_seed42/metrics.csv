@@ -1,0 +1,2 @@
+ekf_position_rmse_m,ekf_horizontal_rmse_m,ekf_vertical_rmse_m,ekf_velocity_rmse_mps,ekf_mean_nis,raw_position_rmse_m,ekf_mean_nees
+190.656250682053,174.211900992653,77.4597926453723,13.1162409000087,3.38523742521074,528.878046509495,10.3502579339722

@@ -34,6 +34,6 @@ result = run_project('replay',42,true,'texas');
 
 `run_real_data_validation` additionally requires the prepared plan, shared observations and expected histories under `data/real_data_validation/`. It evaluates held-out segments at q=1 and q=10. Use `run_real_data_validation(false)` to omit figures.
 
-The five baseline and eight held-out MATLAB outputs have been audited. The separate expanded benchmark tables in the report are local evaluation results; additional MATLAB execution is not claimed.
+The saved outputs have been audited. See [representative comparison results](../results/published_matlab/real_data_validation/README.md) for all eight cases, including original metric rows, plots, estimate histories and a combined summary. Compare each flight/window at q=1 against q=10 using identical observations. Published outputs are preserved separately from newly generated runs.
 
 Flight replays preserve native timing and use approximate local horizontal coordinates with relative altitude. All radar measurements are synthetic. Exact replay velocity truth is unavailable, so velocity RMSE and NEES are omitted. Raw errors exclude missing observations; use observed-time EKF errors for a matching outage comparison.

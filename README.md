@@ -11,6 +11,7 @@ The filter estimates `[east, north, up, vx, vy, vz]` from noisy radar range, azi
 | Folder | Contents |
 | --- | --- |
 | `matlab/` | MATLAB implementation and checks |
+| `results/expanded_flights/` | All 1,200 benchmark metric rows, summaries and protocol |
 | `results/published_matlab/` | Original plots and metric tables from 13 MATLAB runs |
 | `report/` | LaTeX source, cover logo and report figures |
 | `output/pdf/` | Compiled submission report |
@@ -44,9 +45,17 @@ The source also supports recorded-flight replay and shared-input validation. Tho
 
 The published MATLAB results contain five baseline runs—straight flight, turn, outage and two recorded-flight replays—and eight held-out replay runs comparing `q=1` and `q=10`. Each result folder contains its original `trajectory_3d.png`, `errors_nis.png` and `metrics.csv`.
 
-The report also contains a broader local evaluation: four simulation scenarios with 100 trials each, and ten recorded-flight references over 30 windows with 20 paired noise draws and two fixed process-noise settings. Those expanded tables are separate from the 13 MATLAB runs represented by the published figures; additional MATLAB execution is not claimed.
+The revised report also evaluates ten recorded-flight references over 30 windows with 20 paired noise draws and two fixed process-noise settings, giving 1,200 runs. These repeated-trial averages are separate from the individual runs shown by the published figures.
 
 The first two measurements initialize the filter and are excluded from scoring. Raw-observation error includes only observed times; outage comparisons should therefore use the EKF's observed-time error as well. Some sparse or manoeuvring flight windows perform worse than raw measurements, and these outcomes remain in the report.
+
+## Representative process-noise comparison
+
+The [comparison results](results/published_matlab/real_data_validation/README.md) include all eight saved MATLAB runs for two flights, two windows and two q settings. The [combined metric table](results/published_matlab/real_data_validation/comparison_summary.csv) accompanies original plots, metrics and newly included estimate histories. The entry point is `matlab/run_real_data_validation.m`.
+
+From `matlab/`, run `run_real_data_validation` (or `run_real_data_validation(false)` without plots) after restoring the prepared inputs under `data/real_data_validation/`. Those inputs remain excluded, so replay is not self-contained in the public checkout. The code and all eight saved comparison outputs can be reviewed directly.
+
+The [1,200-run benchmark](results/expanded_flights/README.md) is also included. Its `trials.csv` contains every run's metrics, while `summary.json` and `protocol.json` record the aggregation and settings. It is separate from the individual published MATLAB executions. A MATLAB batch driver for all 1,200 cases is not currently included.
 
 ## Build the report
 
@@ -62,7 +71,7 @@ The compiled file is `report/build/main.pdf`. The published copy is under `outpu
 
 ## Data and limitations
 
-Recorded-flight references originate from the sample collection distributed with Xavier Olive's `traffic` project, pinned at commit `1d34bad4ec54cd27b75952d67302f918a836acbd`. The repository publishes aggregate metric tables and figures; raw downloads, per-observation flight exports and aircraft identifiers are excluded. Source information: [traffic sample documentation](https://traffic-viz.github.io/data_sources/samples.html).
+Recorded-flight references originate from the sample collection distributed with Xavier Olive's `traffic` project, pinned at commit `1d34bad4ec54cd27b75952d67302f918a836acbd`. The repository publishes metric tables, figures and the eight comparison estimate histories. Raw downloads, reference/measurement exports and MAT files remain excluded. Source information: [traffic sample documentation](https://traffic-viz.github.io/data_sources/samples.html).
 
 All radar observations are synthetic. Recorded positions are reference trajectories with an unverified altitude datum, using approximate local horizontal coordinates and relative altitude. Replay velocity RMSE and full-state NEES are omitted because exact velocity truth is unavailable. The constant-velocity model's limitations appear during turns and long gaps; simulation provides controlled truth for evaluating uncertainty.
 

@@ -3,6 +3,7 @@
 /*
 !/.gitignore
 !/README.md
+!/PROJECT_WALKTHROUGH.md
 
 !/matlab/
 /matlab/*
@@ -19,9 +20,16 @@
 !/results/published_matlab/**/metrics.csv
 !/results/published_matlab/README.md
 
+# Representative q=1/q=10 MATLAB comparisons: histories and combined metrics
+!/matlab/run_real_data_validation.m
+!/results/published_matlab/real_data_validation/README.md
+!/results/published_matlab/real_data_validation/comparison_summary.csv
+!/results/published_matlab/real_data_validation/*/estimates.csv
+
 !/report/
 /report/*
 !/report/main.tex
+!/report/revised_report.tex
 !/report/metadata.tex
 !/report/README.md
 !/report/University_of_Moratuwa_logo.png
@@ -37,3 +45,17 @@
 !/output/pdf/
 /output/pdf/*
 !/output/pdf/EN4594_EKF_Aircraft_Tracking_Report.pdf
+
+# Original MATLAB figures used by the project walkthrough
+!/walkthrough_images/
+/walkthrough_images/*
+!/walkthrough_images/*.png
+!/walkthrough_images/README.md
+
+# Ten-flight repeated benchmark: all 1,200 metric rows and protocol
+!/results/expanded_flights/
+/results/expanded_flights/*
+!/results/expanded_flights/trials.csv
+!/results/expanded_flights/summary.json
+!/results/expanded_flights/protocol.json
+!/results/expanded_flights/README.md

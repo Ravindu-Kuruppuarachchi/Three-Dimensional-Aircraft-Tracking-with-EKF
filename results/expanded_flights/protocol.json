@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "date": "2026-10-22",
+  "flight_names": [
+    "belevingsvlucht",
+    "texas",
+    "dreamliner_boeing",
+    "easter_rabbit",
+    "qantas747",
+    "thankyou",
+    "brussels_ils",
+    "cardiff",
+    "kota_kinabalu",
+    "ign_mercantour"
+  ],
+  "source_elapsed_window_starts_s": [
+    0,
+    1800,
+    3600
+  ],
+  "window_duration_s": 600,
+  "minimum_native_rows": 10,
+  "q_values": [
+    1.0,
+    10.0
+  ],
+  "measurement_seeds": [
+    3000,
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006,
+    3007,
+    3008,
+    3009,
+    3010,
+    3011,
+    3012,
+    3013,
+    3014,
+    3015,
+    3016,
+    3017,
+    3018,
+    3019
+  ],
+  "radar_configuration": {
+    "q": 1.0,
+    "sigma_r": 50.0,
+    "sigma_az": 0.008726646259971648,
+    "sigma_el": 0.008726646259971648,
+    "min_range": 1.0,
+    "min_horizontal": 1.0
+  },
+  "rule": "Fixed q=1 and q=10 from prior two-flight work; no new-flight parameter selection. Native timestamps, no interpolation, no smoothing, first two rows excluded. Same observations for both settings.",
+  "aggregation": "Mean of trial-level RMSE; equal window weighting within flights and equal flight weighting for macro summary.",
+  "interpretation": "Recorded positions and relative altitude are references; all radar noise is synthetic. Noise-trial intervals do not represent population uncertainty. The eight additional flights were unseen by prior tuning."
+}

@@ -1,0 +1,2010 @@
+{
+  "protocol": {
+    "version": 1,
+    "date": "2026-10-22",
+    "flight_names": [
+      "belevingsvlucht",
+      "texas",
+      "dreamliner_boeing",
+      "easter_rabbit",
+      "qantas747",
+      "thankyou",
+      "brussels_ils",
+      "cardiff",
+      "kota_kinabalu",
+      "ign_mercantour"
+    ],
+    "source_elapsed_window_starts_s": [
+      0,
+      1800,
+      3600
+    ],
+    "window_duration_s": 600,
+    "minimum_native_rows": 10,
+    "q_values": [
+      1.0,
+      10.0
+    ],
+    "measurement_seeds": [
+      3000,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007,
+      3008,
+      3009,
+      3010,
+      3011,
+      3012,
+      3013,
+      3014,
+      3015,
+      3016,
+      3017,
+      3018,
+      3019
+    ],
+    "radar_configuration": {
+      "q": 1.0,
+      "sigma_r": 50.0,
+      "sigma_az": 0.008726646259971648,
+      "sigma_el": 0.008726646259971648,
+      "min_range": 1.0,
+      "min_horizontal": 1.0
+    },
+    "rule": "Fixed q=1 and q=10 from prior two-flight work; no new-flight parameter selection. Native timestamps, no interpolation, no smoothing, first two rows excluded. Same observations for both settings.",
+    "aggregation": "Mean of trial-level RMSE; equal window weighting within flights and equal flight weighting for macro summary.",
+    "interpretation": "Recorded positions and relative altitude are references; all radar noise is synthetic. Noise-trial intervals do not represent population uncertainty. The eight additional flights were unseen by prior tuning."
+  },
+  "distinct_flights": 10,
+  "windows": 30,
+  "trials_per_window": 20,
+  "ekf_runs": 1200,
+  "per_flight": [
+    {
+      "name": "belevingsvlucht",
+      "windows": [
+        {
+          "name": "belevingsvlucht",
+          "start_s": 0,
+          "window_minutes": "0-10",
+          "requested_duration_s": 600,
+          "rows": 550,
+          "scored_rows": 548,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 5.0,
+          "median_gap_s": 1.0,
+          "first_utc": "2018-05-30T15:21:38+00:00",
+          "last_utc": "2018-05-30T15:31:38+00:00",
+          "file": "data/expanded_flights/processed/belevingsvlucht_0000s.csv",
+          "sha256": "3bec8ad5fd482c56cb11347f63a3d83a5277f1e1cdc2b53d0141e194797adb9a"
+        },
+        {
+          "name": "belevingsvlucht",
+          "start_s": 1800,
+          "window_minutes": "30-40",
+          "requested_duration_s": 600,
+          "rows": 549,
+          "scored_rows": 547,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 4.0,
+          "median_gap_s": 1.0,
+          "first_utc": "2018-05-30T15:51:38+00:00",
+          "last_utc": "2018-05-30T16:01:38+00:00",
+          "file": "data/expanded_flights/processed/belevingsvlucht_1800s.csv",
+          "sha256": "8d386e9d4f910680ab3e259bb3e92b911d536c5c8231eccedbc0faed47b16e86"
+        },
+        {
+          "name": "belevingsvlucht",
+          "start_s": 3600,
+          "window_minutes": "60-70",
+          "requested_duration_s": 600,
+          "rows": 586,
+          "scored_rows": 584,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 3.0,
+          "median_gap_s": 1.0,
+          "first_utc": "2018-05-30T16:21:38+00:00",
+          "last_utc": "2018-05-30T16:31:38+00:00",
+          "file": "data/expanded_flights/processed/belevingsvlucht_3600s.csv",
+          "sha256": "529e287133f795e1b2024d1d3dd58b4f85bd901d66461e146de97fef6d8cb38e"
+        }
+      ],
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 292.3384068111402,
+          "horizontal_rmse_m": 282.7204386921187,
+          "vertical_rmse_m": 71.91024189742711,
+          "raw_position_rmse_observed_m": 377.8084714461885,
+          "mean_nis": 6.98429332643156,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            287.6106554094078,
+            297.0661582128725
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 163.48139747815276,
+          "horizontal_rmse_m": 137.7331384630058,
+          "vertical_rmse_m": 87.271568587995,
+          "raw_position_rmse_observed_m": 377.8084714461885,
+          "mean_nis": 3.867922182304325,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            159.40873333748905,
+            167.55406161881646
+          ]
+        }
+      }
+    },
+    {
+      "name": "texas",
+      "windows": [
+        {
+          "name": "texas",
+          "start_s": 0,
+          "window_minutes": "0-10",
+          "requested_duration_s": 600,
+          "rows": 42,
+          "scored_rows": 40,
+          "actual_duration_s": 584.0,
+          "max_gap_s": 35.0,
+          "median_gap_s": 12.0,
+          "first_utc": "2018-10-27T14:38:40+00:00",
+          "last_utc": "2018-10-27T14:48:24+00:00",
+          "file": "data/expanded_flights/processed/texas_0000s.csv",
+          "sha256": "448cc0ba890c19d032c0195db4a362c5516521777797fea196c0a95d91f98ecb"
+        },
+        {
+          "name": "texas",
+          "start_s": 1800,
+          "window_minutes": "30-40",
+          "requested_duration_s": 600,
+          "rows": 20,
+          "scored_rows": 18,
+          "actual_duration_s": 558.0,
+          "max_gap_s": 46.0,
+          "median_gap_s": 33.0,
+          "first_utc": "2018-10-27T15:08:49+00:00",
+          "last_utc": "2018-10-27T15:18:07+00:00",
+          "file": "data/expanded_flights/processed/texas_1800s.csv",
+          "sha256": "27a7445c0098e37b4195f1f3998c080581520d04713aa64cbeed030a2b4ac01e"
+        },
+        {
+          "name": "texas",
+          "start_s": 3600,
+          "window_minutes": "60-70",
+          "requested_duration_s": 600,
+          "rows": 26,
+          "scored_rows": 24,
+          "actual_duration_s": 585.0,
+          "max_gap_s": 60.0,
+          "median_gap_s": 25.0,
+          "first_utc": "2018-10-27T15:38:40+00:00",
+          "last_utc": "2018-10-27T15:48:25+00:00",
+          "file": "data/expanded_flights/processed/texas_3600s.csv",
+          "sha256": "84a7f015110606c7c7d226c6062ff787b0e31b8b27002b3f93c83411fc9f2a75"
+        }
+      ],
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 563.6943700232148,
+          "horizontal_rmse_m": 517.8047239943467,
+          "vertical_rmse_m": 208.88475180050963,
+          "raw_position_rmse_observed_m": 461.9469059509754,
+          "mean_nis": 25.20558818677442,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            546.2160380601638,
+            581.172701986266
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 405.91460424180246,
+          "horizontal_rmse_m": 310.8902894108412,
+          "vertical_rmse_m": 253.60968859321636,
+          "raw_position_rmse_observed_m": 461.9469059509754,
+          "mean_nis": 5.0152993383807765,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            387.35449534912533,
+            424.4747131344796
+          ]
+        }
+      }
+    },
+    {
+      "name": "dreamliner_boeing",
+      "windows": [
+        {
+          "name": "dreamliner_boeing",
+          "start_s": 0,
+          "window_minutes": "0-10",
+          "requested_duration_s": 600,
+          "rows": 46,
+          "scored_rows": 44,
+          "actual_duration_s": 597.0,
+          "max_gap_s": 290.0,
+          "median_gap_s": 6.0,
+          "first_utc": "2017-08-02T22:28:02+00:00",
+          "last_utc": "2017-08-02T22:37:59+00:00",
+          "file": "data/expanded_flights/processed/dreamliner_boeing_0000s.csv",
+          "sha256": "703eea77766e821144229d1deadc3671875614a0b7f8887ac02d9dd82b323b21"
+        },
+        {
+          "name": "dreamliner_boeing",
+          "start_s": 1800,
+          "window_minutes": "30-40",
+          "requested_duration_s": 600,
+          "rows": 10,
+          "scored_rows": 8,
+          "actual_duration_s": 566.0,
+          "max_gap_s": 67.0,
+          "median_gap_s": 63.0,
+          "first_utc": "2017-08-02T22:58:22+00:00",
+          "last_utc": "2017-08-02T23:07:48+00:00",
+          "file": "data/expanded_flights/processed/dreamliner_boeing_1800s.csv",
+          "sha256": "e7874ce1432fd21ce0fbfc5af66ba831100ee466e9fbad0ac2aa5de95301982b"
+        },
+        {
+          "name": "dreamliner_boeing",
+          "start_s": 3600,
+          "window_minutes": "60-70",
+          "requested_duration_s": 600,
+          "rows": 10,
+          "scored_rows": 8,
+          "actual_duration_s": 560.0,
+          "max_gap_s": 64.0,
+          "median_gap_s": 62.0,
+          "first_utc": "2017-08-02T23:28:19+00:00",
+          "last_utc": "2017-08-02T23:37:39+00:00",
+          "file": "data/expanded_flights/processed/dreamliner_boeing_3600s.csv",
+          "sha256": "f0f1c89117a027920ce59cf6211f004ae7411acb5c8cf6c50dc6e3d14424ce8a"
+        }
+      ],
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 635.8484006066014,
+          "horizontal_rmse_m": 396.0734933930893,
+          "vertical_rmse_m": 464.7767575917114,
+          "raw_position_rmse_observed_m": 934.3624705919887,
+          "mean_nis": 4.043604574497258,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            552.2852625745022,
+            719.4115386387009
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 795.9956383918003,
+          "horizontal_rmse_m": 507.64038832721286,
+          "vertical_rmse_m": 580.0464008591463,
+          "raw_position_rmse_observed_m": 934.3624705919887,
+          "mean_nis": 1.9947291445168516,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            710.8555237640303,
+            881.1357530195703
+          ]
+        }
+      }
+    },
+    {
+      "name": "easter_rabbit",
+      "windows": [
+        {
+          "name": "easter_rabbit",
+          "start_s": 0,
+          "window_minutes": "0-10",
+          "requested_duration_s": 600,
+          "rows": 61,
+          "scored_rows": 59,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 10.0,
+          "median_gap_s": 10.0,
+          "first_utc": "2020-04-08T10:55:30+00:00",
+          "last_utc": "2020-04-08T11:05:30+00:00",
+          "file": "data/expanded_flights/processed/easter_rabbit_0000s.csv",
+          "sha256": "fb560ff0018b6f9f18fbfe19dd558521f4241f89febfdd1150294620ec4258fd"
+        },
+        {
+          "name": "easter_rabbit",
+          "start_s": 1800,
+          "window_minutes": "30-40",
+          "requested_duration_s": 600,
+          "rows": 61,
+          "scored_rows": 59,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 10.0,
+          "median_gap_s": 10.0,
+          "first_utc": "2020-04-08T11:25:30+00:00",
+          "last_utc": "2020-04-08T11:35:30+00:00",
+          "file": "data/expanded_flights/processed/easter_rabbit_1800s.csv",
+          "sha256": "8120c4505180f7ea3349f173ab3ff3a05ec3270d845056987cd2e3f9eac5622b"
+        },
+        {
+          "name": "easter_rabbit",
+          "start_s": 3600,
+          "window_minutes": "60-70",
+          "requested_duration_s": 600,
+          "rows": 61,
+          "scored_rows": 59,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 10.0,
+          "median_gap_s": 10.0,
+          "first_utc": "2020-04-08T11:55:30+00:00",
+          "last_utc": "2020-04-08T12:05:30+00:00",
+          "file": "data/expanded_flights/processed/easter_rabbit_3600s.csv",
+          "sha256": "defc7dd56648c08ee5df701ae747f35d2a12a7191dbef8b78ab1ae48b83d9623"
+        }
+      ],
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 145.22107963731423,
+          "horizontal_rmse_m": 123.17592071720726,
+          "vertical_rmse_m": 75.99384163772554,
+          "raw_position_rmse_observed_m": 189.77679451923544,
+          "mean_nis": 5.670100472765993,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            141.84942739818655,
+            148.59273187644203
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 145.26300079435356,
+          "horizontal_rmse_m": 109.13004519562156,
+          "vertical_rmse_m": 95.23819514628921,
+          "raw_position_rmse_observed_m": 189.77679451923544,
+          "mean_nis": 2.4352224870943417,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            141.15441429812455,
+            149.3715872905825
+          ]
+        }
+      }
+    },
+    {
+      "name": "qantas747",
+      "windows": [
+        {
+          "name": "qantas747",
+          "start_s": 0,
+          "window_minutes": "0-10",
+          "requested_duration_s": 600,
+          "rows": 61,
+          "scored_rows": 59,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 10.0,
+          "median_gap_s": 10.0,
+          "first_utc": "2020-07-22T04:55:50+00:00",
+          "last_utc": "2020-07-22T05:05:50+00:00",
+          "file": "data/expanded_flights/processed/qantas747_0000s.csv",
+          "sha256": "8a8a798cbe9d5945a6ea7870cf02d35ba2b0eb3147621d2f5ba46d991bd7279f"
+        },
+        {
+          "name": "qantas747",
+          "start_s": 1800,
+          "window_minutes": "30-40",
+          "requested_duration_s": 600,
+          "rows": 61,
+          "scored_rows": 59,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 10.0,
+          "median_gap_s": 10.0,
+          "first_utc": "2020-07-22T05:25:50+00:00",
+          "last_utc": "2020-07-22T05:35:50+00:00",
+          "file": "data/expanded_flights/processed/qantas747_1800s.csv",
+          "sha256": "d82200b945d4e4acbde3983e80d2c9ac5233cca882958798ccfc16e440c56fa6"
+        },
+        {
+          "name": "qantas747",
+          "start_s": 3600,
+          "window_minutes": "60-70",
+          "requested_duration_s": 600,
+          "rows": 61,
+          "scored_rows": 59,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 10.0,
+          "median_gap_s": 10.0,
+          "first_utc": "2020-07-22T05:55:50+00:00",
+          "last_utc": "2020-07-22T06:05:50+00:00",
+          "file": "data/expanded_flights/processed/qantas747_3600s.csv",
+          "sha256": "1d6b18bff54ab6dac624a97360f6a2be94baa1237d106c6c8fd86fee3f8000dc"
+        }
+      ],
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 400.3611508116464,
+          "horizontal_rmse_m": 386.78172254689866,
+          "vertical_rmse_m": 83.47570698348615,
+          "raw_position_rmse_observed_m": 191.23957188739362,
+          "mean_nis": 30.798228571471775,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            393.0025228966281,
+            407.7197787266647
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 203.62440314333978,
+          "horizontal_rmse_m": 176.70252683643602,
+          "vertical_rmse_m": 97.7843269709111,
+          "raw_position_rmse_observed_m": 191.23957188739362,
+          "mean_nis": 10.473774414909233,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            197.83769759244677,
+            209.41110869423295
+          ]
+        }
+      }
+    },
+    {
+      "name": "thankyou",
+      "windows": [
+        {
+          "name": "thankyou",
+          "start_s": 0,
+          "window_minutes": "0-10",
+          "requested_duration_s": 600,
+          "rows": 61,
+          "scored_rows": 59,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 10.0,
+          "median_gap_s": 10.0,
+          "first_utc": "2020-03-27T10:53:00+00:00",
+          "last_utc": "2020-03-27T11:03:00+00:00",
+          "file": "data/expanded_flights/processed/thankyou_0000s.csv",
+          "sha256": "ce5e2f02b683b35dbd41e6c8e39e90e200fa57c0f4a0399de2b69659bc50330c"
+        },
+        {
+          "name": "thankyou",
+          "start_s": 1800,
+          "window_minutes": "30-40",
+          "requested_duration_s": 600,
+          "rows": 61,
+          "scored_rows": 59,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 10.0,
+          "median_gap_s": 10.0,
+          "first_utc": "2020-03-27T11:23:00+00:00",
+          "last_utc": "2020-03-27T11:33:00+00:00",
+          "file": "data/expanded_flights/processed/thankyou_1800s.csv",
+          "sha256": "0537cf8f949f85476857014283729a7bce81117bb9295ddc089fb6a8f62d7d75"
+        },
+        {
+          "name": "thankyou",
+          "start_s": 3600,
+          "window_minutes": "60-70",
+          "requested_duration_s": 600,
+          "rows": 61,
+          "scored_rows": 59,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 10.0,
+          "median_gap_s": 10.0,
+          "first_utc": "2020-03-27T11:53:00+00:00",
+          "last_utc": "2020-03-27T12:03:00+00:00",
+          "file": "data/expanded_flights/processed/thankyou_3600s.csv",
+          "sha256": "5401c5ab0520d6a6b762be61dede69b5560516102e3fee2a455a9d07b4b5894d"
+        }
+      ],
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 229.496868700042,
+          "horizontal_rmse_m": 208.05210591708374,
+          "vertical_rmse_m": 94.46488386347626,
+          "raw_position_rmse_observed_m": 242.43005518727844,
+          "mean_nis": 8.489452504041303,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            224.29253561534574,
+            234.7012017847382
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 188.14193019107344,
+          "horizontal_rmse_m": 144.81648220836976,
+          "vertical_rmse_m": 119.06152305931019,
+          "raw_position_rmse_observed_m": 242.43005518727844,
+          "mean_nis": 4.346921953737931,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            182.92454455972077,
+            193.35931582242617
+          ]
+        }
+      }
+    },
+    {
+      "name": "brussels_ils",
+      "windows": [
+        {
+          "name": "brussels_ils",
+          "start_s": 0,
+          "window_minutes": "0-10",
+          "requested_duration_s": 600,
+          "rows": 121,
+          "scored_rows": 119,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 5.0,
+          "median_gap_s": 5.0,
+          "first_utc": "2018-12-08T13:07:55+00:00",
+          "last_utc": "2018-12-08T13:17:55+00:00",
+          "file": "data/expanded_flights/processed/brussels_ils_0000s.csv",
+          "sha256": "698af8e2a7d243c932095884ee5128ebc5fcf0e241e158145e0e3ad46f14cce8"
+        },
+        {
+          "name": "brussels_ils",
+          "start_s": 1800,
+          "window_minutes": "30-40",
+          "requested_duration_s": 600,
+          "rows": 121,
+          "scored_rows": 119,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 5.0,
+          "median_gap_s": 5.0,
+          "first_utc": "2018-12-08T13:37:55+00:00",
+          "last_utc": "2018-12-08T13:47:55+00:00",
+          "file": "data/expanded_flights/processed/brussels_ils_1800s.csv",
+          "sha256": "3ad1f4e12ad2f8e65690152d61891782d936e4e56861849123fab36581727328"
+        },
+        {
+          "name": "brussels_ils",
+          "start_s": 3600,
+          "window_minutes": "60-70",
+          "requested_duration_s": 600,
+          "rows": 121,
+          "scored_rows": 119,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 5.0,
+          "median_gap_s": 5.0,
+          "first_utc": "2018-12-08T14:07:55+00:00",
+          "last_utc": "2018-12-08T14:17:55+00:00",
+          "file": "data/expanded_flights/processed/brussels_ils_3600s.csv",
+          "sha256": "e8f1a9070950101fc04014938a93d3e765d5802200c384ce31edbdee8c589ba7"
+        }
+      ],
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 365.0259604071505,
+          "horizontal_rmse_m": 354.8196567817164,
+          "vertical_rmse_m": 84.39026430159986,
+          "raw_position_rmse_observed_m": 258.7502021313243,
+          "mean_nis": 16.282089368637404,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            362.41213239906205,
+            367.6397884152387
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 195.87711070640904,
+          "horizontal_rmse_m": 164.11783176570628,
+          "vertical_rmse_m": 106.10042630854991,
+          "raw_position_rmse_observed_m": 258.7502021313243,
+          "mean_nis": 5.689082992940808,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            191.4565011783322,
+            200.2977202344859
+          ]
+        }
+      }
+    },
+    {
+      "name": "cardiff",
+      "windows": [
+        {
+          "name": "cardiff",
+          "start_s": 0,
+          "window_minutes": "0-10",
+          "requested_duration_s": 600,
+          "rows": 121,
+          "scored_rows": 119,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 5.0,
+          "median_gap_s": 5.0,
+          "first_utc": "2019-02-15T09:25:25+00:00",
+          "last_utc": "2019-02-15T09:35:25+00:00",
+          "file": "data/expanded_flights/processed/cardiff_0000s.csv",
+          "sha256": "39fb3b23c639fb90325d9fc5599135b86ce231880614ee716e24c133794e15fd"
+        },
+        {
+          "name": "cardiff",
+          "start_s": 1800,
+          "window_minutes": "30-40",
+          "requested_duration_s": 600,
+          "rows": 121,
+          "scored_rows": 119,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 5.0,
+          "median_gap_s": 5.0,
+          "first_utc": "2019-02-15T09:55:25+00:00",
+          "last_utc": "2019-02-15T10:05:25+00:00",
+          "file": "data/expanded_flights/processed/cardiff_1800s.csv",
+          "sha256": "dcc2ad43544fb5a57fa05193a9f097d13fe7ce103d63265cd1dd4fd95716d898"
+        },
+        {
+          "name": "cardiff",
+          "start_s": 3600,
+          "window_minutes": "60-70",
+          "requested_duration_s": 600,
+          "rows": 121,
+          "scored_rows": 119,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 5.0,
+          "median_gap_s": 5.0,
+          "first_utc": "2019-02-15T10:25:25+00:00",
+          "last_utc": "2019-02-15T10:35:25+00:00",
+          "file": "data/expanded_flights/processed/cardiff_3600s.csv",
+          "sha256": "d9a7b19619acfb17ba8073e2c53cd22eac9e8692a70021dc8e7d2b0487e9ab81"
+        }
+      ],
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 341.62552211954363,
+          "horizontal_rmse_m": 334.677797524794,
+          "vertical_rmse_m": 66.08967308877715,
+          "raw_position_rmse_observed_m": 176.3713085779868,
+          "mean_nis": 21.70503112066494,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            338.8142950494147,
+            344.43674918967247
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 163.68862055403554,
+          "horizontal_rmse_m": 143.41658130899293,
+          "vertical_rmse_m": 78.09332179269315,
+          "raw_position_rmse_observed_m": 176.3713085779868,
+          "mean_nis": 6.168504421608881,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            161.21811585286588,
+            166.1591252552052
+          ]
+        }
+      }
+    },
+    {
+      "name": "kota_kinabalu",
+      "windows": [
+        {
+          "name": "kota_kinabalu",
+          "start_s": 0,
+          "window_minutes": "0-10",
+          "requested_duration_s": 600,
+          "rows": 121,
+          "scored_rows": 119,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 5.0,
+          "median_gap_s": 5.0,
+          "first_utc": "2017-03-08T01:30:15+00:00",
+          "last_utc": "2017-03-08T01:40:15+00:00",
+          "file": "data/expanded_flights/processed/kota_kinabalu_0000s.csv",
+          "sha256": "ff96d8099243d8f2028d11e563d320f43a05f23641ff56bb1ebfcd3b902a0565"
+        },
+        {
+          "name": "kota_kinabalu",
+          "start_s": 1800,
+          "window_minutes": "30-40",
+          "requested_duration_s": 600,
+          "rows": 121,
+          "scored_rows": 119,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 5.0,
+          "median_gap_s": 5.0,
+          "first_utc": "2017-03-08T02:00:15+00:00",
+          "last_utc": "2017-03-08T02:10:15+00:00",
+          "file": "data/expanded_flights/processed/kota_kinabalu_1800s.csv",
+          "sha256": "7f99ebf6e466913b793542039366e11c455acb5d23d9fae57f6aecf3792ad850"
+        },
+        {
+          "name": "kota_kinabalu",
+          "start_s": 3600,
+          "window_minutes": "60-70",
+          "requested_duration_s": 600,
+          "rows": 121,
+          "scored_rows": 119,
+          "actual_duration_s": 600.0,
+          "max_gap_s": 5.0,
+          "median_gap_s": 5.0,
+          "first_utc": "2017-03-08T02:30:15+00:00",
+          "last_utc": "2017-03-08T02:40:15+00:00",
+          "file": "data/expanded_flights/processed/kota_kinabalu_3600s.csv",
+          "sha256": "2eb70fb828866a152269298595003bdc3a87577535fdd8c1ced047cb9437d627"
+        }
+      ],
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 414.1874832670216,
+          "horizontal_rmse_m": 404.0657775706137,
+          "vertical_rmse_m": 89.36891618192817,
+          "raw_position_rmse_observed_m": 238.66114039486203,
+          "mean_nis": 23.513278170396216,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            408.25722527541245,
+            420.11774125863076
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 211.41114362375146,
+          "horizontal_rmse_m": 185.87165973033365,
+          "vertical_rmse_m": 99.91265941712716,
+          "raw_position_rmse_observed_m": 238.66114039486203,
+          "mean_nis": 8.223915400866776,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            206.96790079080998,
+            215.85438645669294
+          ]
+        }
+      }
+    },
+    {
+      "name": "ign_mercantour",
+      "windows": [
+        {
+          "name": "ign_mercantour",
+          "start_s": 0,
+          "window_minutes": "0-10",
+          "requested_duration_s": 600,
+          "rows": 21,
+          "scored_rows": 19,
+          "actual_duration_s": 577.0,
+          "max_gap_s": 219.0,
+          "median_gap_s": 10.5,
+          "first_utc": "2017-07-06T06:53:36+00:00",
+          "last_utc": "2017-07-06T07:03:13+00:00",
+          "file": "data/expanded_flights/processed/ign_mercantour_0000s.csv",
+          "sha256": "974905c24b993518ee703d4c833c63e732bbc7290ceae606e4850939ef252200"
+        },
+        {
+          "name": "ign_mercantour",
+          "start_s": 1800,
+          "window_minutes": "30-40",
+          "requested_duration_s": 600,
+          "rows": 22,
+          "scored_rows": 20,
+          "actual_duration_s": 551.0,
+          "max_gap_s": 39.0,
+          "median_gap_s": 32.0,
+          "first_utc": "2017-07-06T07:24:03+00:00",
+          "last_utc": "2017-07-06T07:33:14+00:00",
+          "file": "data/expanded_flights/processed/ign_mercantour_1800s.csv",
+          "sha256": "49eca1720efb763034d8438b4d3cbfa706b79bdf46822709b556bce93befb319"
+        },
+        {
+          "name": "ign_mercantour",
+          "start_s": 3600,
+          "window_minutes": "60-70",
+          "requested_duration_s": 600,
+          "rows": 26,
+          "scored_rows": 24,
+          "actual_duration_s": 568.0,
+          "max_gap_s": 41.0,
+          "median_gap_s": 31.0,
+          "first_utc": "2017-07-06T07:54:01+00:00",
+          "last_utc": "2017-07-06T08:03:29+00:00",
+          "file": "data/expanded_flights/processed/ign_mercantour_3600s.csv",
+          "sha256": "1ecf79b74923e508aa9f7099616714c488ef0fe2aafb29389b9a121612e6d8f0"
+        }
+      ],
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 1905.7594349017602,
+          "horizontal_rmse_m": 1890.893689448866,
+          "vertical_rmse_m": 164.33613343728874,
+          "raw_position_rmse_observed_m": 318.513002067277,
+          "mean_nis": 184.64539411250337,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            1888.9230135758376,
+            1922.5958562276824
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 1206.6840829066691,
+          "horizontal_rmse_m": 1169.2573668790108,
+          "vertical_rmse_m": 184.71974482287757,
+          "raw_position_rmse_observed_m": 318.513002067277,
+          "mean_nis": 33.949927283162936,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            1178.2388122050681,
+            1235.12935360827
+          ]
+        }
+      }
+    }
+  ],
+  "per_window": [
+    {
+      "name": "belevingsvlucht",
+      "start_s": 0,
+      "window_minutes": "0-10",
+      "requested_duration_s": 600,
+      "rows": 550,
+      "scored_rows": 548,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 5.0,
+      "median_gap_s": 1.0,
+      "first_utc": "2018-05-30T15:21:38+00:00",
+      "last_utc": "2018-05-30T15:31:38+00:00",
+      "file": "data/expanded_flights/processed/belevingsvlucht_0000s.csv",
+      "sha256": "3bec8ad5fd482c56cb11347f63a3d83a5277f1e1cdc2b53d0141e194797adb9a",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 256.9898817253577,
+          "horizontal_rmse_m": 245.26224645150896,
+          "vertical_rmse_m": 76.39477575393263,
+          "raw_position_rmse_observed_m": 378.3988737734966,
+          "mean_nis": 6.026478830642052,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            251.53122211688847,
+            262.44854133382694
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 163.70463197199345,
+          "horizontal_rmse_m": 136.45917208804772,
+          "vertical_rmse_m": 90.05084570070134,
+          "raw_position_rmse_observed_m": 378.3988737734966,
+          "mean_nis": 3.706474301110352,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            158.74964549734486,
+            168.65961844664204
+          ]
+        }
+      }
+    },
+    {
+      "name": "belevingsvlucht",
+      "start_s": 1800,
+      "window_minutes": "30-40",
+      "requested_duration_s": 600,
+      "rows": 549,
+      "scored_rows": 547,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 4.0,
+      "median_gap_s": 1.0,
+      "first_utc": "2018-05-30T15:51:38+00:00",
+      "last_utc": "2018-05-30T16:01:38+00:00",
+      "file": "data/expanded_flights/processed/belevingsvlucht_1800s.csv",
+      "sha256": "8d386e9d4f910680ab3e259bb3e92b911d536c5c8231eccedbc0faed47b16e86",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 329.32657444650266,
+          "horizontal_rmse_m": 316.39718587714253,
+          "vertical_rmse_m": 90.47230533648946,
+          "raw_position_rmse_observed_m": 545.9461378566051,
+          "mean_nis": 6.424948574234556,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            320.82468748419745,
+            337.82846140880787
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 202.8279988391123,
+          "horizontal_rmse_m": 166.03802172239983,
+          "vertical_rmse_m": 116.20299988305635,
+          "raw_position_rmse_observed_m": 545.9461378566051,
+          "mean_nis": 4.0679609032962105,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            196.2181976741743,
+            209.4378000040503
+          ]
+        }
+      }
+    },
+    {
+      "name": "belevingsvlucht",
+      "start_s": 3600,
+      "window_minutes": "60-70",
+      "requested_duration_s": 600,
+      "rows": 586,
+      "scored_rows": 584,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 3.0,
+      "median_gap_s": 1.0,
+      "first_utc": "2018-05-30T16:21:38+00:00",
+      "last_utc": "2018-05-30T16:31:38+00:00",
+      "file": "data/expanded_flights/processed/belevingsvlucht_3600s.csv",
+      "sha256": "529e287133f795e1b2024d1d3dd58b4f85bd901d66461e146de97fef6d8cb38e",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 290.6987642615601,
+          "horizontal_rmse_m": 286.50188374770465,
+          "vertical_rmse_m": 48.86364460185925,
+          "raw_position_rmse_observed_m": 209.08040270846368,
+          "mean_nis": 8.501452574418071,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            286.2301492679517,
+            295.1673792551685
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 123.91156162335253,
+          "horizontal_rmse_m": 110.70222157856995,
+          "vertical_rmse_m": 55.5608601802273,
+          "raw_position_rmse_observed_m": 209.08040270846368,
+          "mean_nis": 3.829331342506413,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            120.87649424132206,
+            126.94662900538299
+          ]
+        }
+      }
+    },
+    {
+      "name": "texas",
+      "start_s": 0,
+      "window_minutes": "0-10",
+      "requested_duration_s": 600,
+      "rows": 42,
+      "scored_rows": 40,
+      "actual_duration_s": 584.0,
+      "max_gap_s": 35.0,
+      "median_gap_s": 12.0,
+      "first_utc": "2018-10-27T14:38:40+00:00",
+      "last_utc": "2018-10-27T14:48:24+00:00",
+      "file": "data/expanded_flights/processed/texas_0000s.csv",
+      "sha256": "448cc0ba890c19d032c0195db4a362c5516521777797fea196c0a95d91f98ecb",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 286.9720682708411,
+          "horizontal_rmse_m": 240.6408143920546,
+          "vertical_rmse_m": 153.86124366946495,
+          "raw_position_rmse_observed_m": 358.9355789679074,
+          "mean_nis": 8.985327485497525,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            270.65078801818055,
+            303.2933485235016
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 287.08299599815695,
+          "horizontal_rmse_m": 208.93007070236558,
+          "vertical_rmse_m": 193.71440249162055,
+          "raw_position_rmse_observed_m": 358.9355789679074,
+          "mean_nis": 3.4507238880289925,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            264.6119208666414,
+            309.5540711296725
+          ]
+        }
+      }
+    },
+    {
+      "name": "texas",
+      "start_s": 1800,
+      "window_minutes": "30-40",
+      "requested_duration_s": 600,
+      "rows": 20,
+      "scored_rows": 18,
+      "actual_duration_s": 558.0,
+      "max_gap_s": 46.0,
+      "median_gap_s": 33.0,
+      "first_utc": "2018-10-27T15:08:49+00:00",
+      "last_utc": "2018-10-27T15:18:07+00:00",
+      "file": "data/expanded_flights/processed/texas_1800s.csv",
+      "sha256": "27a7445c0098e37b4195f1f3998c080581520d04713aa64cbeed030a2b4ac01e",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 664.173166659098,
+          "horizontal_rmse_m": 609.6382144524076,
+          "vertical_rmse_m": 254.16272683125771,
+          "raw_position_rmse_observed_m": 527.9211096466859,
+          "mean_nis": 36.06846700358983,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            635.7243569239286,
+            692.6219763942674
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 469.4603523207196,
+          "horizontal_rmse_m": 346.55157815036216,
+          "vertical_rmse_m": 309.8534453417394,
+          "raw_position_rmse_observed_m": 527.9211096466859,
+          "mean_nis": 6.195328955819531,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            434.23110860108284,
+            504.6895960403564
+          ]
+        }
+      }
+    },
+    {
+      "name": "texas",
+      "start_s": 3600,
+      "window_minutes": "60-70",
+      "requested_duration_s": 600,
+      "rows": 26,
+      "scored_rows": 24,
+      "actual_duration_s": 585.0,
+      "max_gap_s": 60.0,
+      "median_gap_s": 25.0,
+      "first_utc": "2018-10-27T15:38:40+00:00",
+      "last_utc": "2018-10-27T15:48:25+00:00",
+      "file": "data/expanded_flights/processed/texas_3600s.csv",
+      "sha256": "84a7f015110606c7c7d226c6062ff787b0e31b8b27002b3f93c83411fc9f2a75",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 739.9378751397054,
+          "horizontal_rmse_m": 703.1351431385776,
+          "vertical_rmse_m": 218.63028490080637,
+          "raw_position_rmse_observed_m": 498.9840292383331,
+          "mean_nis": 30.56297007123593,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            711.7039258568094,
+            768.1718244226014
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 461.2004644065308,
+          "horizontal_rmse_m": 377.18921937979593,
+          "vertical_rmse_m": 257.26121794628915,
+          "raw_position_rmse_observed_m": 498.9840292383331,
+          "mean_nis": 5.399845171293811,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            437.25605096036674,
+            485.14487785269483
+          ]
+        }
+      }
+    },
+    {
+      "name": "dreamliner_boeing",
+      "start_s": 0,
+      "window_minutes": "0-10",
+      "requested_duration_s": 600,
+      "rows": 46,
+      "scored_rows": 44,
+      "actual_duration_s": 597.0,
+      "max_gap_s": 290.0,
+      "median_gap_s": 6.0,
+      "first_utc": "2017-08-02T22:28:02+00:00",
+      "last_utc": "2017-08-02T22:37:59+00:00",
+      "file": "data/expanded_flights/processed/dreamliner_boeing_0000s.csv",
+      "sha256": "703eea77766e821144229d1deadc3671875614a0b7f8887ac02d9dd82b323b21",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 144.1357766326855,
+          "horizontal_rmse_m": 126.99516000400654,
+          "vertical_rmse_m": 67.4368206921724,
+          "raw_position_rmse_observed_m": 150.86006285447928,
+          "mean_nis": 4.410312468693084,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            136.53147188637712,
+            151.74008137899386
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 157.16407795152628,
+          "horizontal_rmse_m": 131.99832662880945,
+          "vertical_rmse_m": 82.26428088489303,
+          "raw_position_rmse_observed_m": 150.86006285447928,
+          "mean_nis": 3.3119457167545434,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            137.6902241776169,
+            176.63793172543566
+          ]
+        }
+      }
+    },
+    {
+      "name": "dreamliner_boeing",
+      "start_s": 1800,
+      "window_minutes": "30-40",
+      "requested_duration_s": 600,
+      "rows": 10,
+      "scored_rows": 8,
+      "actual_duration_s": 566.0,
+      "max_gap_s": 67.0,
+      "median_gap_s": 63.0,
+      "first_utc": "2017-08-02T22:58:22+00:00",
+      "last_utc": "2017-08-02T23:07:48+00:00",
+      "file": "data/expanded_flights/processed/dreamliner_boeing_1800s.csv",
+      "sha256": "e7874ce1432fd21ce0fbfc5af66ba831100ee466e9fbad0ac2aa5de95301982b",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 870.4573436824733,
+          "horizontal_rmse_m": 524.5170323027389,
+          "vertical_rmse_m": 653.4931633055328,
+          "raw_position_rmse_observed_m": 1295.2483001626256,
+          "mean_nis": 5.516439731840753,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            745.8491762460156,
+            995.0655111189309
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 1094.5358143275266,
+          "horizontal_rmse_m": 683.7758855311254,
+          "vertical_rmse_m": 811.919262732377,
+          "raw_position_rmse_observed_m": 1295.2483001626256,
+          "mean_nis": 1.5423536922570196,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            971.4238606780789,
+            1217.6477679769744
+          ]
+        }
+      }
+    },
+    {
+      "name": "dreamliner_boeing",
+      "start_s": 3600,
+      "window_minutes": "60-70",
+      "requested_duration_s": 600,
+      "rows": 10,
+      "scored_rows": 8,
+      "actual_duration_s": 560.0,
+      "max_gap_s": 64.0,
+      "median_gap_s": 62.0,
+      "first_utc": "2017-08-02T23:28:19+00:00",
+      "last_utc": "2017-08-02T23:37:39+00:00",
+      "file": "data/expanded_flights/processed/dreamliner_boeing_3600s.csv",
+      "sha256": "f0f1c89117a027920ce59cf6211f004ae7411acb5c8cf6c50dc6e3d14424ce8a",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 892.9520815046462,
+          "horizontal_rmse_m": 536.7082878725225,
+          "vertical_rmse_m": 673.4002887774288,
+          "raw_position_rmse_observed_m": 1356.9790487588612,
+          "mean_nis": 2.204061522957936,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            768.7837815111227,
+            1017.1203814981698
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 1136.2870228963482,
+          "horizontal_rmse_m": 707.1469528217037,
+          "vertical_rmse_m": 845.9556589601683,
+          "raw_position_rmse_observed_m": 1356.9790487588612,
+          "mean_nis": 1.1298880245389917,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            1009.6973273433124,
+            1262.876718449384
+          ]
+        }
+      }
+    },
+    {
+      "name": "easter_rabbit",
+      "start_s": 0,
+      "window_minutes": "0-10",
+      "requested_duration_s": 600,
+      "rows": 61,
+      "scored_rows": 59,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 10.0,
+      "median_gap_s": 10.0,
+      "first_utc": "2020-04-08T10:55:30+00:00",
+      "last_utc": "2020-04-08T11:05:30+00:00",
+      "file": "data/expanded_flights/processed/easter_rabbit_0000s.csv",
+      "sha256": "fb560ff0018b6f9f18fbfe19dd558521f4241f89febfdd1150294620ec4258fd",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 126.39045103575695,
+          "horizontal_rmse_m": 103.1435294406394,
+          "vertical_rmse_m": 72.49626416480041,
+          "raw_position_rmse_observed_m": 177.07500409880302,
+          "mean_nis": 3.64685798121878,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            121.18704724553855,
+            131.59385482597534
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 138.0825259953672,
+          "horizontal_rmse_m": 103.7176805323345,
+          "vertical_rmse_m": 90.64235679148305,
+          "raw_position_rmse_observed_m": 177.07500409880302,
+          "mean_nis": 2.1201079056256704,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            134.0220431709904,
+            142.143008819744
+          ]
+        }
+      }
+    },
+    {
+      "name": "easter_rabbit",
+      "start_s": 1800,
+      "window_minutes": "30-40",
+      "requested_duration_s": 600,
+      "rows": 61,
+      "scored_rows": 59,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 10.0,
+      "median_gap_s": 10.0,
+      "first_utc": "2020-04-08T11:25:30+00:00",
+      "last_utc": "2020-04-08T11:35:30+00:00",
+      "file": "data/expanded_flights/processed/easter_rabbit_1800s.csv",
+      "sha256": "8120c4505180f7ea3349f173ab3ff3a05ec3270d845056987cd2e3f9eac5622b",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 184.60617715360812,
+          "horizontal_rmse_m": 157.67998811857498,
+          "vertical_rmse_m": 94.84051236074404,
+          "raw_position_rmse_observed_m": 252.70138252473186,
+          "mean_nis": 7.448401419972153,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            175.90895302362932,
+            193.3034012835869
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 182.21341957353363,
+          "horizontal_rmse_m": 135.0870733675045,
+          "vertical_rmse_m": 121.30441640937167,
+          "raw_position_rmse_observed_m": 252.70138252473186,
+          "mean_nis": 2.7431372345210208,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            176.2908175396535,
+            188.13602160741377
+          ]
+        }
+      }
+    },
+    {
+      "name": "easter_rabbit",
+      "start_s": 3600,
+      "window_minutes": "60-70",
+      "requested_duration_s": 600,
+      "rows": 61,
+      "scored_rows": 59,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 10.0,
+      "median_gap_s": 10.0,
+      "first_utc": "2020-04-08T11:55:30+00:00",
+      "last_utc": "2020-04-08T12:05:30+00:00",
+      "file": "data/expanded_flights/processed/easter_rabbit_3600s.csv",
+      "sha256": "defc7dd56648c08ee5df701ae747f35d2a12a7191dbef8b78ab1ae48b83d9623",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 124.66661072257776,
+          "horizontal_rmse_m": 108.70424459240743,
+          "vertical_rmse_m": 60.644748387632134,
+          "raw_position_rmse_observed_m": 139.5539969341715,
+          "mean_nis": 5.915042017107048,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            121.0620829912593,
+            128.2711384538962
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 115.49305681415976,
+          "horizontal_rmse_m": 88.58538168702572,
+          "vertical_rmse_m": 73.76781223801291,
+          "raw_position_rmse_observed_m": 139.5539969341715,
+          "mean_nis": 2.4424223211363354,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            112.28680365665961,
+            118.6993099716599
+          ]
+        }
+      }
+    },
+    {
+      "name": "qantas747",
+      "start_s": 0,
+      "window_minutes": "0-10",
+      "requested_duration_s": 600,
+      "rows": 61,
+      "scored_rows": 59,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 10.0,
+      "median_gap_s": 10.0,
+      "first_utc": "2020-07-22T04:55:50+00:00",
+      "last_utc": "2020-07-22T05:05:50+00:00",
+      "file": "data/expanded_flights/processed/qantas747_0000s.csv",
+      "sha256": "8a8a798cbe9d5945a6ea7870cf02d35ba2b0eb3147621d2f5ba46d991bd7279f",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 101.1764615407117,
+          "horizontal_rmse_m": 76.29624226524581,
+          "vertical_rmse_m": 66.17771834452913,
+          "raw_position_rmse_observed_m": 147.5831593576133,
+          "mean_nis": 2.3853906446849282,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            97.74776613668183,
+            104.60515694474157
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 120.89878417832126,
+          "horizontal_rmse_m": 90.46317694182645,
+          "vertical_rmse_m": 79.81168414963965,
+          "raw_position_rmse_observed_m": 147.5831593576133,
+          "mean_nis": 1.8668883729475063,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            117.09772934743883,
+            124.6998390092037
+          ]
+        }
+      }
+    },
+    {
+      "name": "qantas747",
+      "start_s": 1800,
+      "window_minutes": "30-40",
+      "requested_duration_s": 600,
+      "rows": 61,
+      "scored_rows": 59,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 10.0,
+      "median_gap_s": 10.0,
+      "first_utc": "2020-07-22T05:25:50+00:00",
+      "last_utc": "2020-07-22T05:35:50+00:00",
+      "file": "data/expanded_flights/processed/qantas747_1800s.csv",
+      "sha256": "d82200b945d4e4acbde3983e80d2c9ac5233cca882958798ccfc16e440c56fa6",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 445.59151772404937,
+          "horizontal_rmse_m": 439.5089817821046,
+          "vertical_rmse_m": 72.7789296473462,
+          "raw_position_rmse_observed_m": 172.68485071732158,
+          "mean_nis": 47.82210243105622,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            434.4594277578791,
+            456.72360769021964
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 198.50690435770795,
+          "horizontal_rmse_m": 177.0183589360688,
+          "vertical_rmse_m": 88.7039582140429,
+          "raw_position_rmse_observed_m": 172.68485071732158,
+          "mean_nis": 12.664367762766698,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            188.6173878442706,
+            208.3964208711453
+          ]
+        }
+      }
+    },
+    {
+      "name": "qantas747",
+      "start_s": 3600,
+      "window_minutes": "60-70",
+      "requested_duration_s": 600,
+      "rows": 61,
+      "scored_rows": 59,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 10.0,
+      "median_gap_s": 10.0,
+      "first_utc": "2020-07-22T05:55:50+00:00",
+      "last_utc": "2020-07-22T06:05:50+00:00",
+      "file": "data/expanded_flights/processed/qantas747_3600s.csv",
+      "sha256": "1d6b18bff54ab6dac624a97360f6a2be94baa1237d106c6c8fd86fee3f8000dc",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 654.3154731701782,
+          "horizontal_rmse_m": 644.5399435933456,
+          "vertical_rmse_m": 111.47047295858306,
+          "raw_position_rmse_observed_m": 253.45070558724578,
+          "mean_nis": 42.18719263867418,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            639.13358320966,
+            669.4973631306964
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 291.4675208939902,
+          "horizontal_rmse_m": 262.6260446314128,
+          "vertical_rmse_m": 124.83733854905074,
+          "raw_position_rmse_observed_m": 253.45070558724578,
+          "mean_nis": 16.89006710901349,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            280.09627467889163,
+            302.83876710908874
+          ]
+        }
+      }
+    },
+    {
+      "name": "thankyou",
+      "start_s": 0,
+      "window_minutes": "0-10",
+      "requested_duration_s": 600,
+      "rows": 61,
+      "scored_rows": 59,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 10.0,
+      "median_gap_s": 10.0,
+      "first_utc": "2020-03-27T10:53:00+00:00",
+      "last_utc": "2020-03-27T11:03:00+00:00",
+      "file": "data/expanded_flights/processed/thankyou_0000s.csv",
+      "sha256": "ce5e2f02b683b35dbd41e6c8e39e90e200fa57c0f4a0399de2b69659bc50330c",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 210.37010795738883,
+          "horizontal_rmse_m": 198.86799325730357,
+          "vertical_rmse_m": 67.66981626218958,
+          "raw_position_rmse_observed_m": 168.24898447202344,
+          "mean_nis": 11.339681866720046,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            202.09043703661905,
+            218.6497788781586
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 144.00770347689758,
+          "horizontal_rmse_m": 115.23878129951784,
+          "vertical_rmse_m": 85.3248631287759,
+          "raw_position_rmse_observed_m": 168.24898447202344,
+          "mean_nis": 5.092620707967504,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            138.73500450221698,
+            149.28040245157817
+          ]
+        }
+      }
+    },
+    {
+      "name": "thankyou",
+      "start_s": 1800,
+      "window_minutes": "30-40",
+      "requested_duration_s": 600,
+      "rows": 61,
+      "scored_rows": 59,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 10.0,
+      "median_gap_s": 10.0,
+      "first_utc": "2020-03-27T11:23:00+00:00",
+      "last_utc": "2020-03-27T11:33:00+00:00",
+      "file": "data/expanded_flights/processed/thankyou_1800s.csv",
+      "sha256": "0537cf8f949f85476857014283729a7bce81117bb9295ddc089fb6a8f62d7d75",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 225.1002350604775,
+          "horizontal_rmse_m": 203.14185885904485,
+          "vertical_rmse_m": 96.16893232404763,
+          "raw_position_rmse_observed_m": 238.562076657238,
+          "mean_nis": 7.674566737031642,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            218.18308564714246,
+            232.01738447381254
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 188.7655815791498,
+          "horizontal_rmse_m": 145.22183732621866,
+          "vertical_rmse_m": 119.93366277621328,
+          "raw_position_rmse_observed_m": 238.562076657238,
+          "mean_nis": 3.9789251962534515,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            183.33339986565417,
+            194.19776329264542
+          ]
+        }
+      }
+    },
+    {
+      "name": "thankyou",
+      "start_s": 3600,
+      "window_minutes": "60-70",
+      "requested_duration_s": 600,
+      "rows": 61,
+      "scored_rows": 59,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 10.0,
+      "median_gap_s": 10.0,
+      "first_utc": "2020-03-27T11:53:00+00:00",
+      "last_utc": "2020-03-27T12:03:00+00:00",
+      "file": "data/expanded_flights/processed/thankyou_3600s.csv",
+      "sha256": "5401c5ab0520d6a6b762be61dede69b5560516102e3fee2a455a9d07b4b5894d",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 253.02026308225965,
+          "horizontal_rmse_m": 222.14646563490265,
+          "vertical_rmse_m": 119.55590300419158,
+          "raw_position_rmse_observed_m": 320.479104432574,
+          "mean_nis": 6.454108908372222,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            242.78333572145212,
+            263.25719044306715
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 231.65250551717304,
+          "horizontal_rmse_m": 173.98882799937286,
+          "vertical_rmse_m": 151.92604327294134,
+          "raw_position_rmse_observed_m": 320.479104432574,
+          "mean_nis": 3.9692199569928386,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            223.55082798679942,
+            239.75418304754666
+          ]
+        }
+      }
+    },
+    {
+      "name": "brussels_ils",
+      "start_s": 0,
+      "window_minutes": "0-10",
+      "requested_duration_s": 600,
+      "rows": 121,
+      "scored_rows": 119,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 5.0,
+      "median_gap_s": 5.0,
+      "first_utc": "2018-12-08T13:07:55+00:00",
+      "last_utc": "2018-12-08T13:17:55+00:00",
+      "file": "data/expanded_flights/processed/brussels_ils_0000s.csv",
+      "sha256": "698af8e2a7d243c932095884ee5128ebc5fcf0e241e158145e0e3ad46f14cce8",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 394.69327763486365,
+          "horizontal_rmse_m": 384.56360172012336,
+          "vertical_rmse_m": 87.16831835502971,
+          "raw_position_rmse_observed_m": 263.85982757574027,
+          "mean_nis": 15.063537921797144,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            386.02571135505576,
+            403.36084391467153
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 193.9427248159185,
+          "horizontal_rmse_m": 160.74428232990755,
+          "vertical_rmse_m": 107.66314441105987,
+          "raw_position_rmse_observed_m": 263.85982757574027,
+          "mean_nis": 4.5357022073591775,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            188.7917145674622,
+            199.09373506437478
+          ]
+        }
+      }
+    },
+    {
+      "name": "brussels_ils",
+      "start_s": 1800,
+      "window_minutes": "30-40",
+      "requested_duration_s": 600,
+      "rows": 121,
+      "scored_rows": 119,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 5.0,
+      "median_gap_s": 5.0,
+      "first_utc": "2018-12-08T13:37:55+00:00",
+      "last_utc": "2018-12-08T13:47:55+00:00",
+      "file": "data/expanded_flights/processed/brussels_ils_1800s.csv",
+      "sha256": "3ad1f4e12ad2f8e65690152d61891782d936e4e56861849123fab36581727328",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 393.99908531446005,
+          "horizontal_rmse_m": 383.2434557021132,
+          "vertical_rmse_m": 90.38233168057113,
+          "raw_position_rmse_observed_m": 278.34048707963655,
+          "mean_nis": 12.729518733943092,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            384.37924571414317,
+            403.6189249147769
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 206.39644800374458,
+          "horizontal_rmse_m": 171.15064827543705,
+          "vertical_rmse_m": 114.68430674308713,
+          "raw_position_rmse_observed_m": 278.34048707963655,
+          "mean_nis": 4.4525632864830165,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            199.1776854642256,
+            213.61521054326357
+          ]
+        }
+      }
+    },
+    {
+      "name": "brussels_ils",
+      "start_s": 3600,
+      "window_minutes": "60-70",
+      "requested_duration_s": 600,
+      "rows": 121,
+      "scored_rows": 119,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 5.0,
+      "median_gap_s": 5.0,
+      "first_utc": "2018-12-08T14:07:55+00:00",
+      "last_utc": "2018-12-08T14:17:55+00:00",
+      "file": "data/expanded_flights/processed/brussels_ils_3600s.csv",
+      "sha256": "e8f1a9070950101fc04014938a93d3e765d5802200c384ce31edbdee8c589ba7",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 306.38551827212746,
+          "horizontal_rmse_m": 296.65191292291274,
+          "vertical_rmse_m": 75.6201428691987,
+          "raw_position_rmse_observed_m": 234.0502917385958,
+          "mean_nis": 21.05321145017197,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            301.51628477350135,
+            311.25475177075356
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 187.29215929956405,
+          "horizontal_rmse_m": 160.4585646917742,
+          "vertical_rmse_m": 95.95382777150279,
+          "raw_position_rmse_observed_m": 234.0502917385958,
+          "mean_nis": 8.078983484980224,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            181.898432918832,
+            192.6858856802961
+          ]
+        }
+      }
+    },
+    {
+      "name": "cardiff",
+      "start_s": 0,
+      "window_minutes": "0-10",
+      "requested_duration_s": 600,
+      "rows": 121,
+      "scored_rows": 119,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 5.0,
+      "median_gap_s": 5.0,
+      "first_utc": "2019-02-15T09:25:25+00:00",
+      "last_utc": "2019-02-15T09:35:25+00:00",
+      "file": "data/expanded_flights/processed/cardiff_0000s.csv",
+      "sha256": "39fb3b23c639fb90325d9fc5599135b86ce231880614ee716e24c133794e15fd",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 367.0963918456888,
+          "horizontal_rmse_m": 361.0603947387014,
+          "vertical_rmse_m": 65.29613143197273,
+          "raw_position_rmse_observed_m": 177.84855165480704,
+          "mean_nis": 25.616906130131554,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            361.15495133495153,
+            373.03783235642607
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 174.2786926434839,
+          "horizontal_rmse_m": 155.68503895964056,
+          "vertical_rmse_m": 77.74473148502587,
+          "raw_position_rmse_observed_m": 177.84855165480704,
+          "mean_nis": 7.658405932822964,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            170.13773396035506,
+            178.41965132661275
+          ]
+        }
+      }
+    },
+    {
+      "name": "cardiff",
+      "start_s": 1800,
+      "window_minutes": "30-40",
+      "requested_duration_s": 600,
+      "rows": 121,
+      "scored_rows": 119,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 5.0,
+      "median_gap_s": 5.0,
+      "first_utc": "2019-02-15T09:55:25+00:00",
+      "last_utc": "2019-02-15T10:05:25+00:00",
+      "file": "data/expanded_flights/processed/cardiff_1800s.csv",
+      "sha256": "dcc2ad43544fb5a57fa05193a9f097d13fe7ce103d63265cd1dd4fd95716d898",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 440.62052471488494,
+          "horizontal_rmse_m": 434.53021722353526,
+          "vertical_rmse_m": 72.32522875633715,
+          "raw_position_rmse_observed_m": 187.40621393415518,
+          "mean_nis": 28.314681033313615,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            436.08742365897126,
+            445.1536257707986
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 182.94499598971314,
+          "horizontal_rmse_m": 162.67021452401045,
+          "vertical_rmse_m": 83.30915977624042,
+          "raw_position_rmse_observed_m": 187.40621393415518,
+          "mean_nis": 6.434985238864542,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            178.7309498508624,
+            187.15904212856387
+          ]
+        }
+      }
+    },
+    {
+      "name": "cardiff",
+      "start_s": 3600,
+      "window_minutes": "60-70",
+      "requested_duration_s": 600,
+      "rows": 121,
+      "scored_rows": 119,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 5.0,
+      "median_gap_s": 5.0,
+      "first_utc": "2019-02-15T10:25:25+00:00",
+      "last_utc": "2019-02-15T10:35:25+00:00",
+      "file": "data/expanded_flights/processed/cardiff_3600s.csv",
+      "sha256": "d9a7b19619acfb17ba8073e2c53cd22eac9e8692a70021dc8e7d2b0487e9ab81",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 217.15964979805705,
+          "horizontal_rmse_m": 208.44278061214544,
+          "vertical_rmse_m": 60.64765907802153,
+          "raw_position_rmse_observed_m": 163.85916014499838,
+          "mean_nis": 11.183506198549654,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            213.0576035743735,
+            221.2616960217406
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 133.84217302890954,
+          "horizontal_rmse_m": 111.89449044332773,
+          "vertical_rmse_m": 73.22607411681312,
+          "raw_position_rmse_observed_m": 163.85916014499838,
+          "mean_nis": 4.41212209313913,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            131.3131993428071,
+            136.37114671501197
+          ]
+        }
+      }
+    },
+    {
+      "name": "kota_kinabalu",
+      "start_s": 0,
+      "window_minutes": "0-10",
+      "requested_duration_s": 600,
+      "rows": 121,
+      "scored_rows": 119,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 5.0,
+      "median_gap_s": 5.0,
+      "first_utc": "2017-03-08T01:30:15+00:00",
+      "last_utc": "2017-03-08T01:40:15+00:00",
+      "file": "data/expanded_flights/processed/kota_kinabalu_0000s.csv",
+      "sha256": "ff96d8099243d8f2028d11e563d320f43a05f23641ff56bb1ebfcd3b902a0565",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 516.1996008331074,
+          "horizontal_rmse_m": 505.74422406313454,
+          "vertical_rmse_m": 101.72887113648791,
+          "raw_position_rmse_observed_m": 286.53778204903864,
+          "mean_nis": 19.688951564678067,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            502.61124990024695,
+            529.7879517659679
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 259.67298629554386,
+          "horizontal_rmse_m": 230.5612066298802,
+          "vertical_rmse_m": 118.05841589817108,
+          "raw_position_rmse_observed_m": 286.53778204903864,
+          "mean_nis": 6.867717802389924,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            248.37310849177086,
+            270.97286409931684
+          ]
+        }
+      }
+    },
+    {
+      "name": "kota_kinabalu",
+      "start_s": 1800,
+      "window_minutes": "30-40",
+      "requested_duration_s": 600,
+      "rows": 121,
+      "scored_rows": 119,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 5.0,
+      "median_gap_s": 5.0,
+      "first_utc": "2017-03-08T02:00:15+00:00",
+      "last_utc": "2017-03-08T02:10:15+00:00",
+      "file": "data/expanded_flights/processed/kota_kinabalu_1800s.csv",
+      "sha256": "7f99ebf6e466913b793542039366e11c455acb5d23d9fae57f6aecf3792ad850",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 413.3820586920571,
+          "horizontal_rmse_m": 404.3570034878811,
+          "vertical_rmse_m": 85.14780731932738,
+          "raw_position_rmse_observed_m": 257.0500507581424,
+          "mean_nis": 23.39280345862109,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            406.03032935348534,
+            420.7337880306289
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 216.58569472575468,
+          "horizontal_rmse_m": 188.92525994623347,
+          "vertical_rmse_m": 105.44502390218881,
+          "raw_position_rmse_observed_m": 257.0500507581424,
+          "mean_nis": 8.806157909005469,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            210.3900137061704,
+            222.78137574533895
+          ]
+        }
+      }
+    },
+    {
+      "name": "kota_kinabalu",
+      "start_s": 3600,
+      "window_minutes": "60-70",
+      "requested_duration_s": 600,
+      "rows": 121,
+      "scored_rows": 119,
+      "actual_duration_s": 600.0,
+      "max_gap_s": 5.0,
+      "median_gap_s": 5.0,
+      "first_utc": "2017-03-08T02:30:15+00:00",
+      "last_utc": "2017-03-08T02:40:15+00:00",
+      "file": "data/expanded_flights/processed/kota_kinabalu_3600s.csv",
+      "sha256": "2eb70fb828866a152269298595003bdc3a87577535fdd8c1ced047cb9437d627",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 312.98079027590023,
+          "horizontal_rmse_m": 302.09610516082546,
+          "vertical_rmse_m": 81.23007008996919,
+          "raw_position_rmse_observed_m": 172.3955883774053,
+          "mean_nis": 27.4580794878895,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            306.9890353612954,
+            318.97254519050506
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 157.9747498499558,
+          "horizontal_rmse_m": 138.12851261488726,
+          "vertical_rmse_m": 76.23453845102168,
+          "raw_position_rmse_observed_m": 172.3955883774053,
+          "mean_nis": 8.997870491204933,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            152.56853608729702,
+            163.38096361261458
+          ]
+        }
+      }
+    },
+    {
+      "name": "ign_mercantour",
+      "start_s": 0,
+      "window_minutes": "0-10",
+      "requested_duration_s": 600,
+      "rows": 21,
+      "scored_rows": 19,
+      "actual_duration_s": 577.0,
+      "max_gap_s": 219.0,
+      "median_gap_s": 10.5,
+      "first_utc": "2017-07-06T06:53:36+00:00",
+      "last_utc": "2017-07-06T07:03:13+00:00",
+      "file": "data/expanded_flights/processed/ign_mercantour_0000s.csv",
+      "sha256": "974905c24b993518ee703d4c833c63e732bbc7290ceae606e4850939ef252200",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 4932.252816961818,
+          "horizontal_rmse_m": 4924.777949741264,
+          "vertical_rmse_m": 263.66686670495955,
+          "raw_position_rmse_observed_m": 502.9371179081707,
+          "mean_nis": 444.7127802527451,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            4880.766909970616,
+            4983.73872395302
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 3182.810957196559,
+          "horizontal_rmse_m": 3169.111519575172,
+          "vertical_rmse_m": 283.95967168513755,
+          "raw_position_rmse_observed_m": 502.9371179081707,
+          "mean_nis": 82.90528749903635,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            3093.112306818467,
+            3272.5096075746505
+          ]
+        }
+      }
+    },
+    {
+      "name": "ign_mercantour",
+      "start_s": 1800,
+      "window_minutes": "30-40",
+      "requested_duration_s": 600,
+      "rows": 22,
+      "scored_rows": 20,
+      "actual_duration_s": 551.0,
+      "max_gap_s": 39.0,
+      "median_gap_s": 32.0,
+      "first_utc": "2017-07-06T07:24:03+00:00",
+      "last_utc": "2017-07-06T07:33:14+00:00",
+      "file": "data/expanded_flights/processed/ign_mercantour_1800s.csv",
+      "sha256": "49eca1720efb763034d8438b4d3cbfa706b79bdf46822709b556bce93befb319",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 382.9940009139337,
+          "horizontal_rmse_m": 366.6950769676338,
+          "vertical_rmse_m": 105.50426785144336,
+          "raw_position_rmse_observed_m": 203.15374686808588,
+          "mean_nis": 59.37773531374872,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            371.8700299188333,
+            394.11797190903405
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 202.84120873155607,
+          "horizontal_rmse_m": 157.28582779398553,
+          "vertical_rmse_m": 123.65913457103697,
+          "raw_position_rmse_observed_m": 203.15374686808588,
+          "mean_nis": 9.208529416528911,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            191.44681635259403,
+            214.2356011105181
+          ]
+        }
+      }
+    },
+    {
+      "name": "ign_mercantour",
+      "start_s": 3600,
+      "window_minutes": "60-70",
+      "requested_duration_s": 600,
+      "rows": 26,
+      "scored_rows": 24,
+      "actual_duration_s": 568.0,
+      "max_gap_s": 41.0,
+      "median_gap_s": 31.0,
+      "first_utc": "2017-07-06T07:54:01+00:00",
+      "last_utc": "2017-07-06T08:03:29+00:00",
+      "file": "data/expanded_flights/processed/ign_mercantour_3600s.csv",
+      "sha256": "1ecf79b74923e508aa9f7099616714c488ef0fe2aafb29389b9a121612e6d8f0",
+      "configurations": {
+        "1.0": {
+          "position_rmse_m": 402.031486829529,
+          "horizontal_rmse_m": 381.20804163770083,
+          "vertical_rmse_m": 123.83726575546332,
+          "raw_position_rmse_observed_m": 249.44814142557448,
+          "mean_nis": 49.84566677101608,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            388.0101773129115,
+            416.0527963461465
+          ]
+        },
+        "10.0": {
+          "position_rmse_m": 234.4000827918927,
+          "horizontal_rmse_m": 181.37475326787415,
+          "vertical_rmse_m": 146.54042821245812,
+          "raw_position_rmse_observed_m": 249.44814142557448,
+          "mean_nis": 9.735964933923546,
+          "position_rmse_mean_95pct_noise_interval_m": [
+            217.4598773059726,
+            251.34028827781276
+          ]
+        }
+      }
+    }
+  ],
+  "macro": {
+    "1.0": {
+      "position_rmse_m": 529.3558677285436,
+      "horizontal_rmse_m": 489.9065326586734,
+      "vertical_rmse_m": 140.369117078393,
+      "raw_position_rmse_observed_m": 338.98599227545105,
+      "mean_nis": 32.73370604081842,
+      "position_rmse_mean_95pct_noise_interval_m": [
+        519.7120153782164,
+        538.9997200788705
+      ]
+    },
+    "10.0": {
+      "position_rmse_m": 368.0081932031388,
+      "horizontal_rmse_m": 304.95763101255307,
+      "vertical_rmse_m": 170.18378555581157,
+      "raw_position_rmse_observed_m": 338.98599227545105,
+      "mean_nis": 8.216529961952286,
+      "position_rmse_mean_95pct_noise_interval_m": [
+        356.9004633411142,
+        379.1159230651634
+      ]
+    }
+  },
+  "checks": {
+    "all_runs_finite": true,
+    "all_scored_observations_updated": true,
+    "max_covariance_asymmetry": 0.0,
+    "minimum_scaled_covariance_eigenvalue": 0.0
+  }
+}

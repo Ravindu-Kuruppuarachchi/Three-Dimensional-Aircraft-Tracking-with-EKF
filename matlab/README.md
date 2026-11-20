@@ -1,5 +1,7 @@
 # MATLAB implementation
 
+[Project overview](../README.md) · [Final report](../report/Mini_project_220350T.pdf) · [Saved MATLAB results](../results/published_matlab/README.md)
+
 Open this folder in MATLAB or MATLAB Online and run:
 
 ```matlab
@@ -25,7 +27,7 @@ Two measurements initialize position and velocity with their cross-covariance. U
 
 ## Recorded-flight replay
 
-Replay requires locally supplied prepared data; the public repository does not distribute raw or per-observation flight data. With the expected `data/flight_tracks/processed/` clips restored alongside `matlab/`, run:
+Replay requires locally supplied prepared data; saved comparison estimates are included, but the reference and radar-input files required for replay are not distributed. With the expected `data/flight_tracks/processed/` clips restored alongside `matlab/`, run:
 
 ```matlab
 result = run_project('replay');
@@ -37,3 +39,7 @@ result = run_project('replay',42,true,'texas');
 The saved outputs have been audited. See [representative comparison results](../results/published_matlab/real_data_validation/README.md) for all eight cases, including original metric rows, plots, estimate histories and a combined summary. Compare each flight/window at q=1 against q=10 using identical observations. Published outputs are preserved separately from newly generated runs.
 
 Flight replays preserve native timing and use approximate local horizontal coordinates with relative altitude. All radar measurements are synthetic. Exact replay velocity truth is unavailable, so velocity RMSE and NEES are omitted. Raw errors exclude missing observations; use observed-time EKF errors for a matching outage comparison.
+
+## Repeated-trial results
+
+The [ten-flight benchmark](../results/expanded_flights/README.md) publishes all 1,200 metric rows and the saved protocol. The eight-case `run_real_data_validation` command does not execute that full benchmark. A MATLAB batch driver and its prepared inputs for all 1,200 cases are not included.

@@ -1,5 +1,7 @@
 # 3D Aircraft Tracking with an Extended Kalman Filter
 
+[MATLAB usage](matlab/README.md) · [MATLAB results](results/published_matlab/README.md) · [1,200-run benchmark](results/expanded_flights/README.md) · [Final report](report/Mini_project_220350T.pdf)
+
 EN4594 — Autonomous Systems mini project, University of Moratuwa, Semester 07.
 
 This repository contains MATLAB code, MATLAB result plots and metric tables, and the project report for three-dimensional aircraft tracking using an Extended Kalman Filter (EKF).
@@ -42,15 +44,15 @@ The source also supports recorded-flight replay and shared-input validation. Tho
 
 ## Results
 
-The published MATLAB results contain five baseline runs—straight flight, turn, outage and two recorded-flight replays—and eight held-out replay runs comparing `q=1` and `q=10`. Each result folder contains its original `trajectory_3d.png`, `errors_nis.png` and `metrics.csv`.
+The published MATLAB results cover three simulated scenarios and ten replay executions on Belevingsvlucht and Texas. The replay executions include two first-window examples and eight comparisons across two later windows at `q=1` and `q=10`. Each result folder contains its original `trajectory_3d.png`, `errors_nis.png` and `metrics.csv`.
 
-The revised report also evaluates ten recorded-flight references over 30 windows with 20 paired noise draws and two fixed process-noise settings, giving 1,200 runs. These repeated-trial averages are separate from the individual runs shown by the published figures.
+The final report also presents results for ten recorded-flight references over 30 windows with 20 paired noise draws and two fixed process-noise settings, giving 1,200 runs. These repeated-trial averages are separate from the individual runs shown by the published figures.
 
 The first two measurements initialize the filter and are excluded from scoring. Raw-observation error includes only observed times; outage comparisons should therefore use the EKF's observed-time error as well. Some sparse or manoeuvring flight windows perform worse than raw measurements, and these outcomes remain in the report.
 
 ## Representative process-noise comparison
 
-The [comparison results](results/published_matlab/real_data_validation/README.md) include all eight saved MATLAB runs for two flights, two windows and two q settings. The [combined metric table](results/published_matlab/real_data_validation/comparison_summary.csv) accompanies original plots, metrics and newly included estimate histories. The entry point is `matlab/run_real_data_validation.m`.
+The [comparison results](results/published_matlab/real_data_validation/README.md) include all eight saved MATLAB runs for two flights, two windows and two q settings. The [combined metric table](results/published_matlab/real_data_validation/comparison_summary.csv) accompanies original plots, metrics and estimate histories. The entry point is `matlab/run_real_data_validation.m`.
 
 From `matlab/`, run `run_real_data_validation` (or `run_real_data_validation(false)` without plots) after restoring the prepared inputs under `data/real_data_validation/`. Those inputs remain excluded, so replay is not self-contained in the public checkout. The code and all eight saved comparison outputs can be reviewed directly.
 
@@ -58,7 +60,7 @@ The [1,200-run benchmark](results/expanded_flights/README.md) is also included. 
 
 ## Project report
 
-The final submission is [Mini_project_220350T.pdf](report/Mini_project_220350T.pdf). It replaces the earlier report sources, supporting figures and PDF previously stored under `output/pdf/`.
+The final submission is [Mini_project_220350T.pdf](report/Mini_project_220350T.pdf). The report folder contains the submission PDF. LaTeX sources and build instructions are not included in this checkout.
 
 ## Data and limitations
 

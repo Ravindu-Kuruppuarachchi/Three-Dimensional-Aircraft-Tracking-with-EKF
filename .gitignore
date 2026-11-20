@@ -26,25 +26,10 @@
 !/results/published_matlab/real_data_validation/comparison_summary.csv
 !/results/published_matlab/real_data_validation/*/estimates.csv
 
+# Final submission report
 !/report/
 /report/*
-!/report/main.tex
-!/report/revised_report.tex
-!/report/metadata.tex
-!/report/README.md
-!/report/University_of_Moratuwa_logo.png
-!/report/figures/
-/report/figures/*
-!/report/figures/matlab_turn_track.png
-!/report/figures/matlab_dropout_errors.png
-!/report/figures/matlab_belevingsvlucht_track.png
-!/report/figures/matlab_texas_track.png
-
-!/output/
-/output/*
-!/output/pdf/
-/output/pdf/*
-!/output/pdf/EN4594_EKF_Aircraft_Tracking_Report.pdf
+!/report/*.pdf
 
 # Original MATLAB figures used by the project walkthrough
 !/walkthrough_images/

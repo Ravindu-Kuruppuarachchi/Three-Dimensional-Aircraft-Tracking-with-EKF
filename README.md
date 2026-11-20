@@ -13,10 +13,9 @@ The filter estimates `[east, north, up, vx, vy, vz]` from noisy radar range, azi
 | `matlab/` | MATLAB implementation and checks |
 | `results/expanded_flights/` | All 1,200 benchmark metric rows, summaries and protocol |
 | `results/published_matlab/` | Original plots and metric tables from 13 MATLAB runs |
-| `report/` | LaTeX source, cover logo and report figures |
-| `output/pdf/` | Compiled submission report |
+| `report/` | Final submission PDF |
 
-[Read the report](output/pdf/EN4594_EKF_Aircraft_Tracking_Report.pdf).
+[Read the report](report/Mini_project_220350T.pdf).
 
 ## Run the simulations
 
@@ -57,17 +56,9 @@ From `matlab/`, run `run_real_data_validation` (or `run_real_data_validation(fal
 
 The [1,200-run benchmark](results/expanded_flights/README.md) is also included. Its `trials.csv` contains every run's metrics, while `summary.json` and `protocol.json` record the aggregation and settings. It is separate from the individual published MATLAB executions. A MATLAB batch driver for all 1,200 cases is not currently included.
 
-## Build the report
+## Project report
 
-The report is 11 pages including the cover, with simulations first, inline MATLAB explanations and results for all ten flight references. With a LaTeX distribution installed, compile from `report/`:
-
-```sh
-mkdir -p build
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build main.tex
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build main.tex
-```
-
-The compiled file is `report/build/main.pdf`. The published copy is under `output/pdf/`. Cover details are in `report/metadata.tex`.
+The final submission is [Mini_project_220350T.pdf](report/Mini_project_220350T.pdf). It replaces the earlier report sources, supporting figures and PDF previously stored under `output/pdf/`.
 
 ## Data and limitations
 
